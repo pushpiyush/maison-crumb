@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Maison Crumb</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="wipe-overlay"></div>
+
+<header class="site-header">
+  <a href="index.html" class="logo">Maison <span>Crumb</span><small>est. small batch</small></a>
+  <button class="nav-toggle" aria-label="Toggle navigation"><span></span></button>
+  <nav class="main-nav">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="order.html">Order</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section class="section-tight">
+    <div class="wrap about-layout">
+      <div class="about-portrait">
+        <img src="images/about-baker.jpg" alt="The baker behind Maison Crumb, dusted in flour, smiling in her kitchen" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=700&h=900&fit=crop'">
+        <div class="badge-circle">since<br>2019</div>
+      </div>
+      <div class="about-text">
+        <span class="eyebrow">The person behind the oven</span>
+        <h1>Hi, I'm the one with flour on her sleeves.</h1>
+        <p>Maison Crumb started in a kitchen that was never meant to be a business — just a counter where I tested birthday cakes for friends because the grocery store version always tasted like nothing. A few orders turned into a waitlist, and the waitlist turned into this.</p>
+        <p>I still bake everything myself, in small batches, usually with something simmering on the stove and a notebook of flavor combinations I haven't tried yet. Nothing leaves the kitchen that I wouldn't serve at my own table — that's the only rule that's never changed.</p>
+        <p>These days most orders are custom: a flavor someone remembers from their grandmother's kitchen, a cake shaped like a stubborn family pet, a cookie box for a coworker who's having a hard week. If you can describe it, there's a good chance we can bake it.</p>
+
+        <div class="stat-row">
+          <div class="stat"><strong>6+</strong><span>years baking</span></div>
+          <div class="stat"><strong>900+</strong><span>custom orders</span></div>
+          <div class="stat"><strong>0</strong><span>box mixes used</span></div>
+        </div>
+
+        <a href="order.html" class="btn" style="margin-top:2rem;">Let's build your order →</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div><h4>Maison Crumb</h4><p>Custom cakes, cookies & pastries — baked by hand, made to order.</p></div>
+    <div><h4>Explore</h4><a href="menu.html">Menu</a><br><a href="order.html">Order builder</a><br><a href="about.html">Our story</a><br><a href="contact.html">Contact</a></div>
+    <div><h4>Visit / Reach Us</h4><p>Delivery within 12 miles of downtown.<br>Pickup by appointment, Tues–Sat.</p></div>
+  </div>
+  <div class="footer-bottom wrap">© <span id="year"></span> Maison Crumb. Made with butter and patience.</div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
