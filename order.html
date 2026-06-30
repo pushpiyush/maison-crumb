@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order Builder — Maison Crumb</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="wipe-overlay"></div>
+<div id="step-wipe"></div>
+<div id="restore-banner">🧾 Welcome back — your in-progress order was restored.</div>
+
+<header class="site-header">
+  <a href="index.html" class="logo">Maison <span>Crumb</span><small>est. small batch</small></a>
+  <button class="nav-toggle" aria-label="Toggle navigation"><span></span></button>
+  <nav class="main-nav">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="order.html">Order</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section class="section-tight">
+    <div class="wrap order-shell">
+      <span class="eyebrow">Build your order</span>
+      <h1>Let's plan your bake.</h1>
+
+      <div class="step-progress">
+        <div class="step-dot" data-step="1"><div class="circle">1</div>Item</div>
+        <div class="step-dot" data-step="2"><div class="circle">2</div>Size &amp; flavor</div>
+        <div class="step-dot" data-step="3"><div class="circle">3</div>Add-ons</div>
+        <div class="step-dot" data-step="4"><div class="circle">4</div>Price</div>
+        <div class="step-dot" data-step="5"><div class="circle">5</div>Date</div>
+        <div class="step-dot" data-step="6"><div class="circle">6</div>Review</div>
+      </div>
+
+      <p id="step-error" style="color:var(--berry);font-weight:700;text-align:center;opacity:0;transition:opacity .3s;"></p>
+
+      <form id="order-form" action="https://formspree.io/f/your-form-id" method="POST">
+
+        <!-- STEP 1: Item type -->
+        <div class="order-step active" data-step="1">
+          <h3>What are we baking?</h3>
+          <div class="option-grid">
+            <div class="option-card" data-item-type="custom-cake">
+              <svg class="icon" viewBox="0 0 40 40"><rect x="6" y="24" width="28" height="8" rx="1" fill="#c1693f"/><rect x="10" y="16" width="20" height="8" rx="1" fill="#e7b13f"/><rect x="14" y="8" width="12" height="8" rx="1" fill="#8c2f3c"/></svg>
+              <strong>Custom Cake</strong><span>from $48</span>
+            </div>
+            <div class="option-card" data-item-type="cupcakes">
+              <svg class="icon" viewBox="0 0 40 40"><path d="M10 20h20l-2 10H12Z" fill="#c1693f"/><path d="M12 20c0-6 16-6 16 0Z" fill="#f3d889"/></svg>
+              <strong>Cupcake Box</strong><span>from $28</span>
+            </div>
+            <div class="option-card" data-item-type="cookies">
+              <svg class="icon" viewBox="0 0 40 40"><circle cx="20" cy="20" r="14" fill="#c1693f"/><circle cx="15" cy="16" r="1.4" fill="#3a2a1e"/><circle cx="24" cy="15" r="1.4" fill="#3a2a1e"/><circle cx="25" cy="23" r="1.4" fill="#3a2a1e"/></svg>
+              <strong>Cookie Box</strong><span>from $18</span>
+            </div>
+            <div class="option-card" data-item-type="pastry-box">
+              <svg class="icon" viewBox="0 0 40 40"><path d="M8 28 Q14 12 20 12 Q26 12 32 28" stroke="#a14f2c" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+              <strong>Pastry Box</strong><span>from $32</span>
+            </div>
+          </div>
+          <div class="order-nav-buttons">
+            <span></span>
+            <button type="button" class="btn" data-next>Next →</button>
+          </div>
+        </div>
+
+        <!-- STEP 2: Size, quantity, flavor -->
+        <div class="order-step" data-step="2">
+          <h3>Pick a size</h3>
+          <div class="option-grid">
+            <div class="option-card" data-size="small"><strong>Small</strong><span>serves 6–8</span></div>
+            <div class="option-card" data-size="medium"><strong>Medium</strong><span>serves 12–16</span></div>
+            <div class="option-card" data-size="large"><strong>Large</strong><span>serves 20–24</span></div>
+          </div>
+
+          <h3>Quantity</h3>
+          <div class="qty-row">
+            <button type="button" class="qty-btn" id="qty-minus">−</button>
+            <input type="number" id="qty-input" value="1" min="1" max="20" readonly>
+            <button type="button" class="qty-btn" id="qty-plus">+</button>
+          </div>
+
+          <h3>Choose a flavor</h3>
+          <div class="flavor-grid">
+            <div class="flavor-swatch" data-flavor="vanilla">
+              <svg viewBox="0 0 100 80"><rect width="100" height="80" fill="#f3d889"/><rect y="0" width="100" height="14" fill="#fdf6e3"/><rect y="33" width="100" height="14" fill="#fdf6e3"/><rect y="66" width="100" height="14" fill="#fdf6e3"/></svg>
+              <span class="fname">Vanilla Bean</span>
+            </div>
+            <div class="flavor-swatch" data-flavor="chocolate">
+              <svg viewBox="0 0 100 80"><rect width="100" height="80" fill="#6f1f2b"/><rect y="0" width="100" height="14" fill="#3a2a1e"/><rect y="33" width="100" height="14" fill="#3a2a1e"/><rect y="66" width="100" height="14" fill="#3a2a1e"/></svg>
+              <span class="fname">Chocolate Fudge</span>
+            </div>
+            <div class="flavor-swatch" data-flavor="citrus">
+              <svg viewBox="0 0 100 80"><rect width="100" height="80" fill="#e7b13f"/><rect y="0" width="100" height="14" fill="#f3d889"/><rect y="33" width="100" height="14" fill="#f3d889"/><rect y="66" width="100" height="14" fill="#f3d889"/></svg>
+              <span class="fname">Citrus Curd</span>
+            </div>
+            <div class="flavor-swatch" data-flavor="berry">
+              <svg viewBox="0 0 100 80"><rect width="100" height="80" fill="#8c2f3c"/><rect y="0" width="100" height="14" fill="#c1693f"/><rect y="33" width="100" height="14" fill="#c1693f"/><rect y="66" width="100" height="14" fill="#c1693f"/></svg>
+              <span class="fname">Berry Swirl</span>
+            </div>
+          </div>
+
+          <div class="order-nav-buttons">
+            <button type="button" class="btn btn-outline" data-prev>← Back</button>
+            <button type="button" class="btn" data-next>Next →</button>
+          </div>
+        </div>
+
+        <!-- STEP 3: Add-ons -->
+        <div class="order-step" data-step="3">
+          <h3>Add-ons</h3>
+          <div class="addon-list">
+            <div class="addon-row" id="row-message">
+              <label><input type="checkbox" data-addon="message"> Personalized message</label>
+              <span class="price-tag">+$5.00</span>
+              <textarea id="custom-message" placeholder="e.g. Happy Birthday, Sam!" maxlength="60"></textarea>
+            </div>
+            <div class="addon-row">
+              <label><input type="checkbox" data-addon="topper"> Custom cake topper</label>
+              <span class="price-tag">+$8.00</span>
+            </div>
+            <div class="addon-row">
+              <label><input type="checkbox" data-addon="giftwrap"> Gift wrap & ribbon</label>
+              <span class="price-tag">+$4.00</span>
+            </div>
+          </div>
+          <div class="order-nav-buttons">
+            <button type="button" class="btn btn-outline" data-prev>← Back</button>
+            <button type="button" class="btn" data-next>Next →</button>
+          </div>
+        </div>
+
+        <!-- STEP 4: Live price -->
+        <div class="order-step" data-step="4">
+          <h3>Your price</h3>
+          <p>Here's the running total based on what you've picked so far.</p>
+          <div class="price-summary">
+            <div id="price-lines"></div>
+            <div class="total-line"><span>Total</span><strong id="price-display">$0.00</strong></div>
+          </div>
+          <div class="order-nav-buttons">
+            <button type="button" class="btn btn-outline" data-prev>← Back</button>
+            <button type="button" class="btn" data-next>Next →</button>
+          </div>
+        </div>
+
+        <!-- STEP 5: Date -->
+        <div class="order-step" data-step="5">
+          <h3>Delivery or pickup?</h3>
+          <div class="fulfillment-toggle">
+            <button type="button" class="active" data-fulfillment="delivery">Delivery</button>
+            <button type="button" data-fulfillment="pickup">Pickup</button>
+          </div>
+          <h3>Pick a date</h3>
+          <p style="font-size:.85rem;">Orders need at least 48 hours' notice. Dates with 3+ existing orders are fully booked.</p>
+          <div class="calendar" id="calendar"></div>
+          <p id="selected-date-label" style="font-weight:700;color:var(--berry);"></p>
+          <div class="order-nav-buttons">
+            <button type="button" class="btn btn-outline" data-prev>← Back</button>
+            <button type="button" class="btn" data-next>Next →</button>
+          </div>
+        </div>
+
+        <!-- STEP 6: Review & submit -->
+        <div class="order-step" data-step="6">
+          <h3>Review your order</h3>
+          <div class="review-block" id="review-box"></div>
+
+          <h3>Your details</h3>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+            <div><label style="font-size:.82rem;font-weight:700;">Name</label><input type="text" name="name" required style="width:100%;padding:.7em;border-radius:5px;border:1.5px solid var(--paper-line);background:var(--cream-2);"></div>
+            <div><label style="font-size:.82rem;font-weight:700;">Email</label><input type="email" name="email" required style="width:100%;padding:.7em;border-radius:5px;border:1.5px solid var(--paper-line);background:var(--cream-2);"></div>
+          </div>
+
+          <!-- hidden fields synced from order state for Formspree -->
+          <input type="hidden" name="item" id="hf-item">
+          <input type="hidden" name="size" id="hf-size">
+          <input type="hidden" name="quantity" id="hf-qty">
+          <input type="hidden" name="flavor" id="hf-flavor">
+          <input type="hidden" name="addons" id="hf-addons">
+          <input type="hidden" name="message" id="hf-message">
+          <input type="hidden" name="fulfillment" id="hf-fulfillment">
+          <input type="hidden" name="date" id="hf-date">
+          <input type="hidden" name="total" id="hf-total">
+
+          <div class="order-nav-buttons">
+            <button type="button" class="btn btn-outline" data-prev>← Back</button>
+            <button type="submit" class="btn">Submit order ✓</button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div><h4>Maison Crumb</h4><p>Custom cakes, cookies & pastries — baked by hand, made to order.</p></div>
+    <div><h4>Explore</h4><a href="menu.html">Menu</a><br><a href="order.html">Order builder</a><br><a href="about.html">Our story</a><br><a href="contact.html">Contact</a></div>
+    <div><h4>Visit / Reach Us</h4><p>Delivery within 12 miles of downtown.<br>Pickup by appointment, Tues–Sat.</p></div>
+  </div>
+  <div class="footer-bottom wrap">© <span id="year"></span> Maison Crumb. Made with butter and patience.</div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/order.js"></script>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
