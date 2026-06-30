@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maison Crumb — Home Bakery & Custom Cakes</title>
+<meta name="description" content="Maison Crumb is a home bakery crafting custom cakes, cookies, and pastries by hand, made to order.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="wipe-overlay"></div>
+
+<header class="site-header">
+  <a href="index.html" class="logo">Maison <span>Crumb</span><small>est. small batch</small></a>
+  <button class="nav-toggle" aria-label="Toggle navigation"><span></span></button>
+  <nav class="main-nav">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="order.html">Order</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <canvas id="flour-canvas" aria-hidden="true"></canvas>
+    <div class="hero-copy">
+      <span class="eyebrow">Small-batch · Made to order</span>
+      <h1>Cake, baked with <em>both hands</em> and a little flour on the floor.</h1>
+      <p>Maison Crumb is a one-woman home bakery turning out custom cakes, cookies, and pastries from a kitchen that always smells like butter and citrus zest.</p>
+      <div class="hero-cta-row">
+        <a href="order.html" class="btn">Start an order</a>
+        <a href="menu.html" class="btn btn-outline">See the menu</a>
+      </div>
+      <p class="hero-sub-note">48-hour notice on custom cakes · local delivery & pickup</p>
+    </div>
+    <div class="hero-art">
+      <div class="plate"></div>
+      <div class="hero-tag">fresh today</div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="featured-heading">
+        <div>
+          <span class="eyebrow">This week in the kitchen</span>
+          <h2 id="featured-title">Featured today</h2>
+        </div>
+        <a href="menu.html" class="btn btn-outline">Full menu →</a>
+      </div>
+      <div class="featured-grid" id="featured-grid">
+        <!-- populated by JS based on day-of-week -->
+      </div>
+    </div>
+  </section>
+
+  <section class="section-tight" style="background:var(--cream-2);">
+    <div class="wrap about-layout" style="grid-template-columns:1fr 1fr;align-items:center;">
+      <div>
+        <span class="eyebrow">A note from the kitchen</span>
+        <h2>Nothing here comes from a mix.</h2>
+        <p>Every cake starts as butter, sugar, and eggs at room temperature on the counter the night before — no shortcuts, no box mixes, no fondant unless you ask nicely. Custom flavors are mixed to order, and every order is built around your date, your guest count, and what's actually in season.</p>
+        <a href="about.html" class="btn btn-outline">Read the full story →</a>
+      </div>
+      <div>
+        <img src="images/about-kitchen.jpg" alt="Hands kneading dough on a flour-dusted counter" style="border-radius:var(--radius);box-shadow:var(--shadow-soft);" onerror="this.style.display='none'">
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <h4>Maison Crumb</h4>
+      <p>A home bakery for custom cakes, cookies & pastries — every order mixed, baked, and decorated by hand.</p>
+      <div class="social-row">
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2c2.7 0 3.06.01 4.12.06 1.07.05 1.79.22 2.43.46.66.26 1.21.6 1.76 1.15.5.5.86 1.05 1.15 1.76.24.64.41 1.36.46 2.43C21.97 8.94 22 9.3 22 12s-.01 3.06-.06 4.12c-.05 1.07-.22 1.79-.46 2.43a4.9 4.9 0 0 1-1.15 1.76 4.9 4.9 0 0 1-1.76 1.15c-.64.24-1.36.41-2.43.46C15.06 21.97 14.7 22 12 22s-3.06-.01-4.12-.06c-1.07-.05-1.79-.22-2.43-.46a4.9 4.9 0 0 1-1.76-1.15 4.9 4.9 0 0 1-1.15-1.76c-.24-.64-.41-1.36-.46-2.43C2.03 15.06 2 14.7 2 12s.01-3.06.06-4.12c.05-1.07.22-1.79.46-2.43.26-.66.6-1.21 1.15-1.76A4.9 4.9 0 0 1 5.43 2.5c.64-.24 1.36-.41 2.43-.46C8.94 2.03 9.3 2 12 2zm0 1.8c-2.65 0-2.98.01-4.02.06-.87.04-1.34.18-1.65.3-.42.16-.71.35-1.02.66-.31.31-.5.6-.66 1.02-.12.31-.26.78-.3 1.65C4.31 9.02 4.3 9.35 4.3 12s.01 2.98.06 4.02c.04.87.18 1.34.3 1.65.16.42.35.71.66 1.02.31.31.6.5 1.02.66.31.12.78.26 1.65.3 1.04.05 1.37.06 4.02.06s2.98-.01 4.02-.06c.87-.04 1.34-.18 1.65-.3.42-.16.71-.35 1.02-.66.31-.31.5-.6.66-1.02.12-.31.26-.78.3-1.65.05-1.04.06-1.37.06-4.02s-.01-2.98-.06-4.02c-.04-.87-.18-1.34-.3-1.65a2.74 2.74 0 0 0-.66-1.02 2.74 2.74 0 0 0-1.02-.66c-.31-.12-.78-.26-1.65-.3C14.98 4.31 14.65 4.3 12 4.3zm0 3.06A4.64 4.64 0 1 1 7.36 12 4.64 4.64 0 0 1 12 7.36zm0 1.8a2.84 2.84 0 1 0 0 5.68 2.84 2.84 0 0 0 0-5.68zm5.88-1.99a1.08 1.08 0 1 1-2.16 0 1.08 1.08 0 0 1 2.16 0z"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M13.5 21v-7.6h2.55l.38-2.96h-2.93V8.55c0-.86.24-1.44 1.47-1.44h1.57V4.46c-.27-.04-1.2-.12-2.28-.12-2.26 0-3.8 1.38-3.8 3.91v2.18H8v2.96h2.46V21z"/></svg></a>
+        <a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.65 19.31c-.05-.82-.1-2.08.02-2.98.11-.81 1.1-5.1 1.1-5.1s-.28-.56-.28-1.39c0-1.3.76-2.27 1.7-2.27.8 0 1.19.6 1.19 1.32 0 .8-.51 2-.78 3.12-.22.94.47 1.7 1.4 1.7 1.68 0 2.97-1.77 2.97-4.32 0-2.26-1.62-3.84-3.94-3.84-2.68 0-4.26 2.01-4.26 4.09 0 .81.31 1.68.71 2.15.08.09.09.17.06.27l-.27 1.08c-.04.18-.14.22-.32.13-1.2-.56-1.95-2.3-1.95-3.71 0-3.02 2.2-5.8 6.33-5.8 3.33 0 5.91 2.37 5.91 5.53 0 3.3-2.08 5.95-4.97 5.95-.97 0-1.88-.5-2.19-1.1l-.6 2.28c-.21.83-.8 1.86-1.19 2.49A10 10 0 1 0 12 2z"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <a href="menu.html">Menu</a><br>
+      <a href="order.html">Order builder</a><br>
+      <a href="about.html">Our story</a><br>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div>
+      <h4>Visit / Reach Us</h4>
+      <p>Delivery within 12 miles of downtown.<br>Pickup by appointment, Tues–Sat.</p>
+      <p>hello@maisoncrumb.example</p>
+    </div>
+  </div>
+  <div class="footer-bottom wrap">© <span id="year"></span> Maison Crumb. Made with butter and patience.</div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/particles.js"></script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // ---- "Featured This Week" content driven by day-of-week ----
+  var CATALOG = {
+    cake: { tag: "Cake", name: "Brown Butter Honey Cake", price: "$52", img: "images/item-honeycake.jpg" },
+    citrus: { tag: "Cake", name: "Blood Orange Olive Oil Cake", price: "$48", img: "images/item-citruscake.jpg" },
+    cookie: { tag: "Cookies", name: "Brown Sugar Sablés", price: "$22", img: "images/item-sables.jpg" },
+    berry: { tag: "Pastry", name: "Mixed Berry Galette", price: "$34", img: "images/item-galette.jpg" },
+    choc: { tag: "Cookies", name: "Dark Chocolate Chunk", price: "$20", img: "images/item-chocchunk.jpg" },
+    custom: { tag: "Custom", name: "Build-Your-Own Tier Cake", price: "from $80", img: "images/item-tiercake.jpg" },
+    vanilla: { tag: "Cake", name: "Vanilla Bean Layer Cake", price: "$46", img: "images/item-vanillacake.jpg" }
+  };
+  var WEEKLY_MAP = {
+    0: ["cake", "berry", "custom"],   // Sunday
+    1: ["cookie", "vanilla", "citrus"], // Monday
+    2: ["choc", "cake", "berry"],       // Tuesday
+    3: ["citrus", "cookie", "custom"],  // Wednesday
+    4: ["berry", "vanilla", "choc"],    // Thursday
+    5: ["custom", "cake", "citrus"],    // Friday
+    6: ["vanilla", "berry", "cookie"]   // Saturday
+  };
+  var DAY_NAMES = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+  var todayIdx = new Date().getDay();
+  var picks = WEEKLY_MAP[todayIdx];
+  document.getElementById("featured-title").textContent = "Featured for " + DAY_NAMES[todayIdx];
+
+  var grid = document.getElementById("featured-grid");
+  grid.innerHTML = picks.map(function (key) {
+    var item = CATALOG[key];
+    return (
+      '<article class="feature-card">' +
+        '<div class="feature-img-wrap">' +
+          '<img src="' + item.img + '" alt="' + item.name + '" onerror="this.src=\'https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&h=450&fit=crop\'">' +
+          '<svg class="unwrap-overlay" viewBox="0 0 100 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">' +
+            '<polygon points="0,0 100,0 100,100 0,100" fill="#f1e4cc"></polygon>' +
+            '<path d="M0,0 L100,0 L100,15 Q50,30 0,15 Z" fill="#e7b13f" opacity="0.6"></path>' +
+          '</svg>' +
+        '</div>' +
+        '<div class="feature-body">' +
+          '<span class="tag">' + item.tag + '</span>' +
+          '<h3>' + item.name + '</h3>' +
+          '<span class="feature-price">' + item.price + '</span>' +
+        '</div>' +
+      '</article>'
+    );
+  }).join("");
+
+  // trigger unwrap effect on scroll into view
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) entry.target.classList.add("unwrapped");
+    });
+  }, { threshold: 0.4 });
+  document.querySelectorAll(".feature-card").forEach(function (c) { io.observe(c); });
+</script>
+</body>
+</html>
