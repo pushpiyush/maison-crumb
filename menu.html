@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu — Maison Crumb</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="wipe-overlay"></div>
+
+<header class="site-header">
+  <a href="index.html" class="logo">Maison <span>Crumb</span><small>est. small batch</small></a>
+  <button class="nav-toggle" aria-label="Toggle navigation"><span></span></button>
+  <nav class="main-nav">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="order.html">Order</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section class="section-tight">
+    <div class="wrap">
+      <span class="eyebrow">Everything we bake</span>
+      <h1>The menu</h1>
+      <p style="max-width:50ch;">Browse by category or search by flavor — everything is baked fresh to order, nothing sits in a case.</p>
+
+      <div class="menu-toolbar">
+        <div class="filter-pills">
+          <button class="filter-pill active" data-category="all">All</button>
+          <button class="filter-pill" data-category="cakes">Cakes</button>
+          <button class="filter-pill" data-category="cookies">Cookies</button>
+          <button class="filter-pill" data-category="pastries">Pastries</button>
+          <button class="filter-pill" data-category="custom">Custom Orders</button>
+        </div>
+        <div class="search-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" id="menu-search" placeholder="Search flavors, e.g. citrus...">
+        </div>
+      </div>
+
+      <div class="menu-grid" id="menu-grid">
+
+        <!-- CAKES -->
+        <div class="menu-item span-2x2" data-id="1" data-category="cakes" data-keywords="vanilla bean classic layer">
+          <img src="images/item-vanillacake.jpg" alt="Vanilla Bean Layer Cake" onerror="this.src='https://images.unsplash.com/photo-1535141192574-5d4897c12636?w=700&h=700&fit=crop'">
+          <svg class="flavor-svg" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#f3d889"/><path d="M10 24c4-10 16-10 20 0" stroke="#a14f2c" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="15" cy="16" r="1.4" fill="#3a2a1e"/><circle cx="25" cy="16" r="1.4" fill="#3a2a1e"/></svg>
+          <div class="mi-info"><span>Cake</span><h4>Vanilla Bean Layer</h4></div>
+        </div>
+
+        <div class="menu-item span-2x1" data-id="2" data-category="cakes" data-keywords="chocolate fudge rich">
+          <img src="images/item-chocolatecake.jpg" alt="Chocolate Fudge Cake" onerror="this.src='https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=700&h=350&fit=crop'">
+          <svg class="flavor-svg" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#6f1f2b"/><circle cx="20" cy="20" r="8" fill="#3a2a1e"/></svg>
+          <div class="mi-info"><span>Cake</span><h4>Dark Chocolate Fudge</h4></div>
+        </div>
+
+        <div class="menu-item" data-id="3" data-category="cakes" data-keywords="citrus orange olive oil">
+          <img src="images/item-citruscake.jpg" alt="Citrus Olive Oil Cake" onerror="this.src='https://images.unsplash.com/photo-1519869325930-281384150729?w=400&h=300&fit=crop'">
+          <svg class="flavor-svg" viewBox="0 0 40 40"><path d="M20 4 Q34 12 30 26 Q22 36 10 30 Q2 20 8 10 Q12 2 20 4Z" fill="#e7b13f"/><path d="M14 30c4-8 12-16 18-20" stroke="#fff" stroke-width="1" fill="none" opacity=".5"/></svg>
+          <div class="mi-info"><span>Cake</span><h4>Citrus Olive Oil</h4></div>
+        </div>
+
+        <div class="menu-item" data-id="4" data-category="cakes" data-keywords="berry swirl strawberry raspberry">
+          <img src="images/item-berrycake.jpg" alt="Berry Swirl Cake" onerror="this.src='https://images.unsplash.com/photo-1488477181946-6428a0291777?w=400&h=300&fit=crop'">
+          <svg class="flavor-svg" viewBox="0 0 40 40"><path d="M20 6c8 0 12 8 8 16-3 6-13 6-16 0-4-8 0-16 8-16Z" fill="#8c2f3c"/><path d="M20 6v22" stroke="#3a2a1e" stroke-width="1"/></svg>
+          <div class="mi-info"><span>Cake</span><h4>Mixed Berry Swirl</h4></div>
+        </div>
+
+        <!-- COOKIES -->
+        <div class="menu-item span-1x2" data-id="5" data-category="cookies" data-keywords="chocolate chunk warm">
+          <img src="images/item-chocchunk.jpg" alt="Dark Chocolate Chunk Cookies" onerror="this.src='https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=400&h=600&fit=crop'">
+          <svg class="flavor-svg" viewBox="0 0 40 40"><path d="M14 30c-1-4 1-6 0-9" stroke="#f8efdf" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M20 30c-1-5 2-7 0-11" stroke="#f8efdf" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M26 30c-1-4 1-6 0-9" stroke="#f8efdf" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+          <div class="mi-info"><span>Cookies</span><h4>Dark Chocolate Chunk</h4></div>
+        </div>
+
+        <div class="menu-item" data-id="6" data-category="cookies" data-keywords="brown sugar sable vanilla">
+          <img src="images/item-sables.jpg" alt="Brown Sugar Sablés" onerror="this.src='https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=400&h=300&fit=crop&sat=-50'">
+          <svg class="flavor-svg" viewBox="0 0 40 40"><rect x="14" y="6" width="3" height="20" rx="1.5" fill="#f3d889"/><path d="M14 8 q-2 2 0 4 M17 8 q2 2 0 4 M14 14 q-2 2 0 4 M17 14 q2 2 0 4" stroke="#a14f2c" stroke-width="1" fill="none"/></svg>
+          <div class="mi-info"><span>Cookies</span><h4>Brown Sugar Sablés</h4></div>
+        </div>
+
+        <div class="menu-item span-2x1" data-id="7" data-category="cookies" data-keywords="oatmeal raisin spice">
+          <img src="images/item-oatmeal.jpg" alt="Oatmeal Spice Cookies" onerror="this.src='https://images.unsplash.com/photo-1559656914-a30970c1affd?w=700&h=350&fit=crop'">
+          <svg class="flavor-svg" viewBox="0 0 40 40"><circle cx="20" cy="20" r="16" fill="#c1693f"/><circle cx="14" cy="16" r="1.2" fill="#3a2a1e"/><circle cx="22" cy="14" r="1.2" fill="#3a2a1e"/><circle cx="26" cy="22" r="1.2" fill="#3a2a1e"/><circle cx="16" cy="24" r="1.2" fill="#3a2a1e"/></svg>
+          <div class="mi-info"><span>Cookies</span><h4>Oatmeal Spice</h4></div>
+        </div>
+
+        <!-- PASTRIES -->
+        <div class="menu-item span-2x2" data-id="8" data-category="pastries" data-keywords="berry galette warm fruit">
+          <img src="images/item-galette.jpg" alt="Mixed Berry Galette" onerror="this.src='https://images.unsplash.com/photo-1464195244916-405fa0a82545?w=700&h=700&fit=crop'">
+          <svg class="flavor-svg" viewBox="0 0 40 40"><path d="M8 28 Q12 14 20 14 Q28 14 32 28" stroke="#f8efdf" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M12 28 Q15 18 20 18 Q25 18 28 28" stroke="#f8efdf" stroke-width="1.4" fill="none" opacity=".7"/></svg>
+          <div class="mi-info"><span>Pastry</span><h4>Mixed Berry Galette</h4></div>
+        </div>
+
+        <div class="menu-item" data-id="9" data-category="pastries" data-keywords="croissant butter warm">
+          <img src="images/item-croissant.jpg" alt="Butter Croissants" onerror="this.src='https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=400&h=300&fit=crop'">
+          <svg class="flavor-svg" viewBox="0 0 40 40"><path d="M8 26 Q14 10 20 10 Q26 10 32 26" stroke="#f8efdf" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+          <div class="mi-info"><span>Pastry</span><h4>Butter Croissants</h4></div>
+        </div>
+
+        <div class="menu-item" data-id="10" data-category="pastries" data-keywords="citrus curd tart lemon">
+          <img src="images/item-lemontart.jpg" alt="Citrus Curd Tart" onerror="this.src='https://images.unsplash.com/photo-1519340241574-2cec6aef0c01?w=400&h=300&fit=crop'">
+          <svg class="flavor-svg" viewBox="0 0 40 40"><path d="M20 4 Q34 12 30 26 Q22 36 10 30 Q2 20 8 10 Q12 2 20 4Z" fill="#e7b13f"/></svg>
+          <div class="mi-info"><span>Pastry</span><h4>Citrus Curd Tart</h4></div>
+        </div>
+
+        <!-- CUSTOM -->
+        <div class="menu-item span-2x1" data-id="11" data-category="custom" data-keywords="tiered cake wedding custom design">
+          <img src="images/item-tiercake.jpg" alt="Custom Tiered Cake" onerror="this.src='https://images.unsplash.com/photo-1535254973040-607b474cb50d?w=700&h=350&fit=crop'">
+          <svg class="flavor-svg" viewBox="0 0 40 40"><rect x="6" y="26" width="28" height="6" rx="1" fill="#f3d889"/><rect x="10" y="18" width="20" height="6" rx="1" fill="#e7b13f"/><rect x="14" y="10" width="12" height="6" rx="1" fill="#c1693f"/></svg>
+          <div class="mi-info"><span>Custom</span><h4>Tiered Celebration Cake</h4></div>
+        </div>
+
+        <div class="menu-item" data-id="12" data-category="custom" data-keywords="custom cupcakes assorted">
+          <img src="images/item-cupcakes.jpg" alt="Custom Cupcake Box" onerror="this.src='https://images.unsplash.com/photo-1426869981800-95ebf51ce900?w=400&h=300&fit=crop'">
+          <svg class="flavor-svg" viewBox="0 0 40 40"><path d="M10 20h20l-2 10H12Z" fill="#c1693f"/><path d="M12 20c0-6 16-6 16 0Z" fill="#f3d889"/></svg>
+          <div class="mi-info"><span>Custom</span><h4>Custom Cupcake Box</h4></div>
+        </div>
+
+      </div>
+      <p class="no-results" id="no-results">No bakes match that search — try another flavor.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <h4>Maison Crumb</h4>
+      <p>A home bakery for custom cakes, cookies & pastries — every order mixed, baked, and decorated by hand.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <a href="menu.html">Menu</a><br><a href="order.html">Order builder</a><br><a href="about.html">Our story</a><br><a href="contact.html">Contact</a>
+    </div>
+    <div>
+      <h4>Visit / Reach Us</h4>
+      <p>Delivery within 12 miles of downtown.<br>Pickup by appointment, Tues–Sat.</p>
+    </div>
+  </div>
+  <div class="footer-bottom wrap">© <span id="year"></span> Maison Crumb. Made with butter and patience.</div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/menu.js"></script>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

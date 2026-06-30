@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Maison Crumb</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="wipe-overlay"></div>
+
+<header class="site-header">
+  <a href="index.html" class="logo">Maison <span>Crumb</span><small>est. small batch</small></a>
+  <button class="nav-toggle" aria-label="Toggle navigation"><span></span></button>
+  <nav class="main-nav">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="order.html">Order</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section class="section-tight">
+    <div class="wrap">
+      <span class="eyebrow">Say hello</span>
+      <h1>Get in touch</h1>
+
+      <div class="contact-layout" style="margin-top:2rem;">
+        <form class="contact-form" id="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+          <div>
+            <label for="c-name">Name</label>
+            <input type="text" id="c-name" name="name" required>
+          </div>
+          <div>
+            <label for="c-email">Email</label>
+            <input type="email" id="c-email" name="email" required>
+          </div>
+          <div>
+            <label for="c-subject">What's this about?</label>
+            <input type="text" id="c-subject" name="subject" placeholder="Custom cake question, wholesale, etc.">
+          </div>
+          <div>
+            <label for="c-message">Message</label>
+            <textarea id="c-message" name="message" required></textarea>
+          </div>
+          <button type="submit" class="btn">Send message</button>
+          <p class="form-status" id="contact-status"></p>
+        </form>
+
+        <div>
+          <div class="info-card">
+            <h4>Delivery area</h4>
+            <ul class="delivery-list">
+              <li>Downtown & surrounding neighborhoods — free</li>
+              <li>Up to 12 miles out — $6 delivery fee</li>
+              <li>Pickup by appointment, Tues–Sat, 10am–5pm</li>
+            </ul>
+          </div>
+          <div class="info-card" style="background:var(--terracotta-dark);">
+            <h4>Find us</h4>
+            <p style="color:var(--cream-2);">hello@maisoncrumb.example<br>(555) 014-2290</p>
+            <div class="social-row">
+              <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2c2.7 0 3.06.01 4.12.06 1.07.05 1.79.22 2.43.46.66.26 1.21.6 1.76 1.15.5.5.86 1.05 1.15 1.76.24.64.41 1.36.46 2.43C21.97 8.94 22 9.3 22 12s-.01 3.06-.06 4.12c-.05 1.07-.22 1.79-.46 2.43a4.9 4.9 0 0 1-1.15 1.76 4.9 4.9 0 0 1-1.76 1.15c-.64.24-1.36.41-2.43.46C15.06 21.97 14.7 22 12 22s-3.06-.01-4.12-.06c-1.07-.05-1.79-.22-2.43-.46a4.9 4.9 0 0 1-1.76-1.15 4.9 4.9 0 0 1-1.15-1.76c-.24-.64-.41-1.36-.46-2.43C2.03 15.06 2 14.7 2 12s.01-3.06.06-4.12c.05-1.07.22-1.79.46-2.43.26-.66.6-1.21 1.15-1.76A4.9 4.9 0 0 1 5.43 2.5c.64-.24 1.36-.41 2.43-.46C8.94 2.03 9.3 2 12 2zm0 1.8c-2.65 0-2.98.01-4.02.06-.87.04-1.34.18-1.65.3-.42.16-.71.35-1.02.66-.31.31-.5.6-.66 1.02-.12.31-.26.78-.3 1.65C4.31 9.02 4.3 9.35 4.3 12s.01 2.98.06 4.02c.04.87.18 1.34.3 1.65.16.42.35.71.66 1.02.31.31.6.5 1.02.66.31.12.78.26 1.65.3 1.04.05 1.37.06 4.02.06s2.98-.01 4.02-.06c.87-.04 1.34-.18 1.65-.3.42-.16.71-.35 1.02-.66.31-.31.5-.6.66-1.02.12-.31.26-.78.3-1.65.05-1.04.06-1.37.06-4.02s-.01-2.98-.06-4.02c-.04-.87-.18-1.34-.3-1.65a2.74 2.74 0 0 0-.66-1.02 2.74 2.74 0 0 0-1.02-.66c-.31-.12-.78-.26-1.65-.3C14.98 4.31 14.65 4.3 12 4.3zm0 3.06A4.64 4.64 0 1 1 7.36 12 4.64 4.64 0 0 1 12 7.36zm0 1.8a2.84 2.84 0 1 0 0 5.68 2.84 2.84 0 0 0 0-5.68zm5.88-1.99a1.08 1.08 0 1 1-2.16 0 1.08 1.08 0 0 1 2.16 0z"/></svg></a>
+              <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M13.5 21v-7.6h2.55l.38-2.96h-2.93V8.55c0-.86.24-1.44 1.47-1.44h1.57V4.46c-.27-.04-1.2-.12-2.28-.12-2.26 0-3.8 1.38-3.8 3.91v2.18H8v2.96h2.46V21z"/></svg></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-list">
+        <h2>Frequently asked</h2>
+
+        <div class="faq-item">
+          <button class="faq-question">How far in advance should I order?<span class="plus">+</span></button>
+          <div class="faq-answer"><p>At least 48 hours for most items. Larger tiered cakes and very busy weekends (holidays, graduation season) often need a week or more — the order calendar will tell you if your date is already full.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Do you accommodate allergies or dietary needs?<span class="plus">+</span></button>
+          <div class="faq-answer"><p>Gluten-free and dairy-free versions are available for most items with advance notice. The kitchen does handle nuts, so cross-contact can't be fully ruled out — mention any allergies in your order notes.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Can I make changes after I submit my order?<span class="plus">+</span></button>
+          <div class="faq-answer"><p>Yes, as long as it's more than 48 hours before your date. Just reply to your confirmation email or use the contact form here with your order details.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What's your cancellation policy?<span class="plus">+</span></button>
+          <div class="faq-answer"><p>Full refund if you cancel more than 72 hours out. Inside 72 hours, ingredients are usually already prepped, so cancellations are refunded at 50%.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div><h4>Maison Crumb</h4><p>Custom cakes, cookies & pastries — baked by hand, made to order.</p></div>
+    <div><h4>Explore</h4><a href="menu.html">Menu</a><br><a href="order.html">Order builder</a><br><a href="about.html">Our story</a><br><a href="contact.html">Contact</a></div>
+    <div><h4>Visit / Reach Us</h4><p>Delivery within 12 miles of downtown.<br>Pickup by appointment, Tues–Sat.</p></div>
+  </div>
+  <div class="footer-bottom wrap">© <span id="year"></span> Maison Crumb. Made with butter and patience.</div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // ---- FAQ accordion: scaleY rise with overshoot easing ----
+  document.querySelectorAll(".faq-question").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var answer = btn.nextElementSibling;
+      var isOpen = btn.classList.contains("open");
+      // close any other open items
+      document.querySelectorAll(".faq-question.open").forEach(function (other) {
+        if (other !== btn) {
+          other.classList.remove("open");
+          other.nextElementSibling.classList.remove("open");
+        }
+      });
+      btn.classList.toggle("open", !isOpen);
+      answer.classList.toggle("open", !isOpen);
+    });
+  });
+
+  // ---- contact form: light client-side handling (Formspree handles real submit) ----
+  var form = document.getElementById("contact-form");
+  var status = document.getElementById("contact-status");
+  if (form) {
+    form.addEventListener("submit", function () {
+      status.textContent = "Sending...";
+      status.className = "form-status";
+    });
+  }
+</script>
+</body>
+</html>
